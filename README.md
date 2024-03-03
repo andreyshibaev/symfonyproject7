@@ -14,3 +14,4 @@
 13. composer require symfony/apache-pack (for production)
 14. composer require symfony/rate-limiter
 15. php bin/console sass:build --watch (for development)
+16. add your data in .env.local file 
