@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <section id="homepagesection">
+        <div class="container">
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success alert-dismissible fade show mt-4" role="alert" data-turbo-temporary>
+                    <strong>{{ message }}</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

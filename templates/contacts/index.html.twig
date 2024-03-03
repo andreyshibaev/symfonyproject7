@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    <section id="contactspage">
+        <div class="container py-5">
+            <nav aria-label="breadcrumb">
+                <ul class="breadcrumb py-4">
+                    <li class="breadcrumb-item"><a href="{{ path('homepage') }}">Homepage</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+                </ul>
+            </nav>
+            <h1>{{ title }}</h1>
+            <div class="contacts_form" data-turbo="false">
+                {% for message in app.flashes('success') %}
+                    <div class="alert alert-success alert-dismissible fade show mt-4" role="alert">
+                        <strong>{{ message }}</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+                {{ form_start(contactsform) }}
+                {{ form_errors(contactsform) }}
+                {{ form_row(contactsform.username) }}
+                {{ form_row(contactsform.emailuser) }}
+                {{ form_row(contactsform.content_message) }}
+                {{ form_row(contactsform.submit) }}
+                {{ form_end(contactsform) }}
+            </div>
+        </div>
+    </section>
+{% endblock %}
