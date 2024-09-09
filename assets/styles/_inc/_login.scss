@@ -1,0 +1,78 @@
+#login_page {
+  padding: $page_container;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+}
+
+.wrapper_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+
+  .block_form {
+    input {
+      box-shadow: inset 0 0 3px 1px #000;
+    }
+
+    background: #05373f;
+    padding: 50px;
+    max-width: 500px;
+    width: 100%;
+    @include breakpoint($phonebp) {
+      padding: 20px;
+    }
+
+    .btn-login_auth {
+      background: #165e6a;
+      color: #fff;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      margin-top: 30px;
+      padding: 10px 0;
+      &:hover {
+        transition: all .5s;
+        background: #feee3d;
+        color: #000;
+      }
+
+      &:active {
+        transition: all .5s;
+        background: #e7ad98;
+        color: #000;
+      }
+    }
+    box-shadow: 0 0 10px 1px #000;
+  }
+
+  .registerLoginText {
+    color: #fff;
+    margin-top: 30px;
+    text-transform: uppercase;
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      display: block;
+      border: 1px solid #feee3d;
+      padding: 10px;
+      margin-top: 10px;
+      text-align: center;
+
+      &:hover {
+        transition: all .5s;
+        background: #581b06;
+      }
+
+      &:active {
+        transition: all .5s;
+        border: 1px solid #37a2a4;
+      }
+    }
+  }
+}

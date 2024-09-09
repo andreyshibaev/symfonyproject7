@@ -1,0 +1,18 @@
+@import '_inc/vars';
+@import '_inc/mixins';
+@import './../../vendor/twbs/bootstrap/scss/bootstrap';
+@import '_inc/header';
+@import '_inc/footer';
+@import '_inc/menu';
+@import '_inc/login';
+@import '_inc/register';
+@import '_inc/breadcrumbs';
+@import '_inc/homepage';
+@import '_inc/change_password_page';
+@import '_inc/edit_profile_page';
+@import '_inc/profile_page';
+@import '_inc/contactspage';
+
+body {
+  height: 100dvh;
+}

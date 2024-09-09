@@ -1,0 +1,46 @@
+#profile_page {
+  margin: 100px 0;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  .wrapper_profile_page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    border: 5px solid #0a3622;
+    padding: 70px;
+    @include breakpoint($xlbp) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint($largebp) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint($desktopbp) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include breakpoint($tabletbp) {
+      grid-template-columns: 1fr;
+    }
+
+    .edit_btns {
+      .btn_profile {
+        display: block;
+        background: #0a3622;
+        color: #fff;
+        text-decoration: none;
+        padding: 7px 20px;
+        max-width: 220px;
+        margin: 10px 0;
+        text-align: center;
+        border-radius: 5px;
+
+        &:hover {
+          transition: all 0.5s;
+          background: #0d5e42;
+        }
+      }
+    }
+  }
+}
