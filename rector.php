@@ -9,11 +9,11 @@ use Rector\Set\ValueObject\SetList;
 
 return RectorConfig::configure()
     ->withPaths([
-        __DIR__ . '/assets',
-        __DIR__ . '/config',
-        __DIR__ . '/public',
-        __DIR__ . '/src',
-        __DIR__ . '/tests',
+        __DIR__.'/assets',
+        __DIR__.'/config',
+        __DIR__.'/public',
+        __DIR__.'/src',
+        __DIR__.'/tests',
     ])
     ->withRules([
         InlineConstructorDefaultToPropertyRector::class,
@@ -24,5 +24,5 @@ return RectorConfig::configure()
         SetList::CODE_QUALITY,
         LevelSetList::UP_TO_PHP_82,
         SetList::DEAD_CODE,
-        SetList::CODING_STYLE
+        SetList::CODING_STYLE,
     ]);

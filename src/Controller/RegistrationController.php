@@ -86,7 +86,7 @@ class RegistrationController extends AbstractController
     public function verifyUserEmail(Request $request, VerifyEmailHelperInterface $verifyEmailHelper, UserRepository $userRepository, EntityManagerInterface $entityManager): Response
     {
         $user = $userRepository->find($request->query->get('id'));
-        if ($user === null) {
+        if (null === $user) {
             throw $this->createNotFoundException();
         }
 
