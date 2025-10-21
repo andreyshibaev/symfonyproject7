@@ -25,7 +25,7 @@ class ProfileController extends AbstractController
     #[Route('/edit-profile', name: 'user_edit', methods: ['GET', 'POST'])]
     public function edit(
         Request $request,
-        EntityManagerInterface $entityManager
+        EntityManagerInterface $entityManager,
     ): Response {
         $user = $this->getUser();
         $profileform = $this->createForm(ProfileFormType::class, $user);

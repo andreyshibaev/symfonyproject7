@@ -11,14 +11,14 @@ use Symfony\Component\Mime\Email;
 class SendEmailService
 {
     public function __construct(
-        private MailerInterface $mailer
+        private MailerInterface $mailer,
     ) {
     }
 
     public function sendEmail(
         $admin_email,
         $subject = 'Message received',
-        $bodyLetter = null
+        $bodyLetter = null,
     ): void {
         $message = (new Email())
             ->from($admin_email)

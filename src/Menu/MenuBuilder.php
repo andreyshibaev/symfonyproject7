@@ -51,20 +51,20 @@ class MenuBuilder
 
             $menu->addChild('Profile', [
                 'route' => 'account-user',
-                ])
+            ])
                 ->setAttribute('class', 'nav-item')
                 ->setLinkAttribute('class', 'nav-link')
             ;
             $menu->addChild('Log out', [
                 'route' => 'app_logout',
-                ])
+            ])
                 ->setAttribute('class', 'nav-item')
                 ->setLinkAttribute('class', 'nav-link')
             ;
         } else {
             $menu->addChild('Log in', [
                 'route' => 'login_auth',
-                ])
+            ])
                 ->setAttribute('class', 'nav-item')
                 ->setLinkAttribute('class', 'nav-link')
             ;

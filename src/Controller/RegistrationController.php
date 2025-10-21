@@ -29,7 +29,7 @@ class RegistrationController extends AbstractController
         EntityManagerInterface $entityManager,
         $admin_email,
         MailerInterface $mailer,
-        VerifyEmailHelperInterface $verifyEmailHelper
+        VerifyEmailHelperInterface $verifyEmailHelper,
     ): Response {
         if ($this->getUser() instanceof UserInterface) {
             return $this->redirectToRoute('homepage');
