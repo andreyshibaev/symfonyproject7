@@ -24,9 +24,9 @@ class ContactsPageFormType extends AbstractType
                     'placeholder' => 'Add name',
                 ],
                 'constraints' => [
-                    new Length([
-                        'min' => 3,
-                    ]),
+                    new Length(
+                        min: 3,
+                    ),
                 ],
             ])
             ->add('emailuser', EmailType::class, [
@@ -35,10 +35,10 @@ class ContactsPageFormType extends AbstractType
                     'placeholder' => 'Add email',
                 ],
                 'constraints' => [
-                    new Email([
-                        'mode' => 'html5',
-                        'message' => 'In Latin letters, example `user@gmail.com`',
-                    ]),
+                    new Email(
+                        message: 'In Latin letters, example `user@gmail.com`',
+                        mode: 'html5',
+                    ),
                     new NoSuspiciousCharacters(),
                 ],
             ])
@@ -46,9 +46,9 @@ class ContactsPageFormType extends AbstractType
                 'label' => 'Your message',
                 'required' => true,
                 'constraints' => [
-                    new Length([
-                        'min' => 15,
-                    ]),
+                    new Length(
+                        min: 15,
+                    ),
                     new NoSuspiciousCharacters(),
                 ],
                 'attr' => [
