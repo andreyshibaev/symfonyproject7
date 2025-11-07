@@ -1,4 +1,4 @@
-import './bootstrap.js';
+import './stimulus_bootstrap.js';
 import './vendor/bootstrap/bootstrap.index.js';
 import './styles/app.scss';
 /*
